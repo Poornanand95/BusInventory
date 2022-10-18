@@ -1,0 +1,15 @@
+.footer_wrapper {
+    padding: 20px;
+    background-color: #e9630c;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* position: fixed;
+    bottom: 0px;
+    width: 100%; */
+}
+.code_icon {
+    padding: 0px 20px;
+    font-size: 22px;
+}

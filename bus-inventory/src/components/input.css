@@ -1,0 +1,70 @@
+
+.widget_wrapper {
+    padding: 16px;
+    background-color: #fefbf0;
+}
+
+.message_text {
+    font-size: 32px;
+}
+.message_highlight {
+    color: #e9630c;;
+}
+.submit_btn {
+    border-radius: 5px;
+    background-color: #e9630c;
+    font-size: 18px;
+    font-weight: 800;
+    text-align: center;
+    color: #ffffff;
+    cursor: pointer;
+    margin-top: 16px;
+    width: 100%;
+    padding: 10px;
+    border: solid 1px #e9630c;
+}
+.form_wrapper {
+    display: flex;
+    flex-direction: column;
+}
+.input_field, .direction, .status {
+    padding: 14px;
+    font-size: 16px;
+    margin: 10px 0px;
+    border-radius: 3px;
+    box-shadow: 0 10px 50px 0 rgb(0 0 0 / 7%);
+    border: solid 1px #ebebeb;
+    background-color: #ffffff;
+}
+.stop_points_wrap {
+    display: flex;
+    flex-direction: column;
+    border-radius: 3px;
+    box-shadow: 0 10px 50px 0 rgb(0 0 0 / 7%);
+    border: solid 1px #ee8080;
+    padding: 16px;
+}
+.lat_log_wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.stop_point_lat, .stop_point_log {
+    max-width: 40%;
+    margin: 5px;
+}
+.stop_details {
+    background-color: white;
+    padding: 10px;
+    border-radius: 3px;
+    box-shadow: 0 10px 50px 0 rgb(0 0 0 / 7%);
+    border: solid 1px #ebebeb;
+    margin: 10px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.stop_delete_icon {
+    color: #e9630c;
+    font-size: 20px;
+}

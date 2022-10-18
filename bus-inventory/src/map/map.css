@@ -1,0 +1,9 @@
+.mapContainer > div {
+    width: 100%;
+    height: 50vh;
+    z-index: 1;
+  }
+  /* //Overridding inbuilt CSS for hiding leaflet component overlay */
+  .mapContainer > div:nth-child(2) {
+    display: none;
+  }

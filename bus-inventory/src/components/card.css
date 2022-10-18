@@ -1,0 +1,76 @@
+.card_wrapper {
+    width: 100%;
+    background: white;
+    border: 1px solid #efefef;
+    box-shadow: 0 2px 30px 0 rgb(0 0 0 / 6%);
+    border-radius: 8px;
+    margin: 20px 0px;
+}
+.fixed-height-img {
+    border-radius: 8px 8px 0px 0px;
+}
+.travel_img {
+    border-radius: 8px 8px 0px 0px;
+    height: 190px;
+}
+.card_details {
+    padding: 12px 12px 0px;
+}
+.card_heading {
+    color: #e9630c;
+    font-size: 22px;
+}
+.heading_wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 30px;
+}
+.edit_tools_icon {
+    font-size: 18px;
+    color: #e9630c;
+}
+.edit, .delete {
+    padding: 0px 10px;
+}
+.stops_mssg{
+    display: inline-block;
+    margin: 10px 10px 10px 0px;
+    padding: 4px 10px;
+    border-radius: 10px;
+    background-color: #e9630c;
+    color: #efefef;
+}
+.stops_count {
+    padding: 4px 8px;
+    border-radius: 50%;
+    background-color: rgb(57, 166, 57);
+    color: #efefef;
+    font-weight: 700;
+}
+.stops_list {
+    list-style: none;
+    padding: 0px;
+}
+.navigate_map {
+    display: flex;
+    justify-content: flex-end;
+    padding: 16px;
+    background-color: #e9630c;
+    border-radius: 0px 0px 8px 8px;
+}
+.map_message {
+    color: white;
+    font-weight: 700;
+    padding: 0px 20px 0px 0px;
+}
+.map_arrow {
+    background-color: #efefef;
+    border-radius: 50%;
+    padding: 10px;
+    color: #e9630c;
+    box-shadow: 0 4px 21px 0 rgb(0 0 0 / 19%);
+}
+.map_link {
+    text-decoration: none;
+}
