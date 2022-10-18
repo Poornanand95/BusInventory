@@ -26,7 +26,9 @@ export const manageState = (state, action) => {
         window.localStorage.setItem("routes", JSON.stringify(editedRoutes));
       return editedRoutes
      case "DELETE_COMPLETE_ROUTE":
-      return state.filter((eachRoute) => eachRoute.routeId != action.payload.routeId );
+      let delRoutes = state.filter((eachRoute) => eachRoute.routeId != action.payload.routeId )
+      window.localStorage.setItem("routes", JSON.stringify(delRoutes));
+      return delRoutes;
     case "SET_ROUTE_ID":
       return {
         ...state,

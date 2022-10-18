@@ -14,7 +14,7 @@ function RouteList({dispatch, routes}) {
       </div>
       {routes.length > 0 ? 
         routes.map((eachRoute) => {
-        return (<Card dispatch={dispatch} eachRoute={eachRoute}/>)
+        return (<Card dispatch={dispatch} key={eachRoute.routeId} eachRoute={eachRoute}/>)
         })
         : <div style={{"height": "50vh"}}>Currently no routes to show!</div>}
     </div>

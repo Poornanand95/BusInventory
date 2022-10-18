@@ -32,7 +32,7 @@ function Card({dispatch, eachRoute}) {
             <span className='stops_count'>{eachRoute.stops.length}</span>
             <ul className='stops_list'>
             {eachRoute.stops.map((eachStop) => {
-                return (<li>{eachStop.name}</li>)
+                return (<li key={eachStop.name}>{eachStop.name}</li>)
             })}
             </ul>   
         </div>

@@ -6,7 +6,7 @@ function Header() {
   return (
     <div className='header'>
     <Link to="/">
-      <i class="fa-solid fa-house-chimney travel_icon"></i>
+      <i className="fa-solid fa-house-chimney travel_icon"></i>
     </Link>
     <div className='branding_text'>
         <div className='first_text'>One App for</div>

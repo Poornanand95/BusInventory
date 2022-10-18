@@ -94,7 +94,7 @@ function InputWidget({dispatch, route}) {
         <div className="form_wrapper">
             <input 
               className="input_field" 
-              autocomplete="off" 
+              autoComplete="off" 
               placeholder="Route Name" 
               value={routeName} 
               onChange={(e) => handleOnChange(e, "routeName")}>
@@ -111,7 +111,7 @@ function InputWidget({dispatch, route}) {
         <div className="stop_points_wrap">
           <input 
               className="input_field stop_point_name" 
-              autocomplete="off" 
+              autoComplete="off" 
               placeholder="Stop point name" 
               value={stopName} 
               onChange={(e) => handleOnChange(e, "stopName")}>
@@ -119,14 +119,14 @@ function InputWidget({dispatch, route}) {
           <div className='lat_log_wrap'>
             <input 
                 className="input_field stop_point_lat" 
-                autocomplete="off" 
+                autoComplete="off" 
                 placeholder="Point latitude" 
                 value={stopLat} 
                 onChange={(e) => handleOnChange(e, "stopLat")}>
             </input>
             <input 
                 className="input_field stop_point_log" 
-                autocomplete="off" 
+                autoComplete="off" 
                 placeholder="Point longitude" 
                 value={stopLog} 
                 onChange={(e) => handleOnChange(e, "stopLog")}>
@@ -136,7 +136,7 @@ function InputWidget({dispatch, route}) {
         </div>
         <div className='stops_list'>
           {stopPoints.map((eachStop) => {
-            return (<div className='stop_details'>
+            return (<div className='stop_details' key={eachStop.name}>
               <div className='stop_text'>
                 <strong>{eachStop.name} </strong>
                 <span> Lat : {eachStop.lat} , </span>
