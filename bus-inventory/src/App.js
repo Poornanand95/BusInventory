@@ -4,31 +4,12 @@ import Footer from './components/Footer';
 import Home from './pages/Home';
 import MapPage from './pages/MapPage';
 import CreateRoute from './pages/CreateRoute';
-import { useReducer } from "react";
-
+import { useReducer, useEffect, useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { manageState } from "./reducers/createroute-reducer";
-
+import popularRoutes from "./popularRoutes.json"
 function App() {
-  const popularRoute = {
-    direction: "up",
-    routeId: "4cefeaed-68ac-4475-aef1-462ff47790df",
-    routeName: "Delhi to Lucknow",
-    status: "active",
-    stops: [
-      {
-        lat: "26.85",
-        log: "80.949",
-        name: "Lucknow City"
-      },
-      {
-        lat: "28.644",
-        log: "77.216",
-        name: "Delhi City"
-      }
-    ]
-  }
-  const initialState = [popularRoute];
+  let initialState = localStorage.getItem("routes")?JSON.parse(localStorage.getItem('routes')) : [popularRoutes];
   const [routes, dispatch] = useReducer(manageState, initialState);
   return (
     <Router>

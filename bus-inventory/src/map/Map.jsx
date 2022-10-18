@@ -1,6 +1,5 @@
 import { MapContainer, TileLayer, Marker } from "react-leaflet";
 import Routing from "./Routing";
-// import style from "../../styles/map.module.css";
 import { Icon } from "leaflet";
 import "leaflet/dist/leaflet.css";
 import './map.css'
@@ -13,7 +12,6 @@ const destIcon = new Icon({
   iconUrl: "/icons/destination-map-icon.svg",
   iconSize: [25, 25],
 });
-const position = [51.505, -0.09]
 const Maps = ({stops}) => {
   return (
     <MapContainer

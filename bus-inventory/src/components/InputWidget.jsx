@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from 'react';
+import { useNavigate } from 'react-router-dom';
 import './input.css';
 
 function InputWidget({dispatch, route}) {
@@ -8,7 +9,7 @@ function InputWidget({dispatch, route}) {
   const [stopLog, setStopLog] = useState ("");
   const [stopPoints, setStopPoints] = useState ([]);
   const [routeId, setRouteId] = useState ("");
-
+  const navigate  = useNavigate()
   useEffect(() => {
     if (Object.keys(route).length) {
       setRouteName(route.routeName);
@@ -33,24 +34,16 @@ function InputWidget({dispatch, route}) {
       } else {
         if (singleRoute.routeId) {
           dispatch({
-            type: "DELETE_COMPLETE_ROUTE",
-            payload: {routeId: singleRoute.routeId}
-          });
-          dispatch({
-            type: "ADD_COMPLETE_ROUTE",
-            payload: {singleRoute: singleRoute}
+            type: "EDIT_COMPLETE_ROUTE",
+            payload: {routeId: singleRoute.routeId, route: singleRoute}
           });
         } else {
           dispatch({
             type: "ADD_COMPLETE_ROUTE",
-            payload: {singleRoute: singleRoute}
+            payload: {singleRoute: singleRoute, isAdd: true}
           });
         }
-        setStopName("");
-        setStopLat("");
-        setStopLog("");
-        setRouteName("");
-        setStopPoints([]);
+        navigate("/")
       }
     } else {
       alert("fill all fields for route");
@@ -71,7 +64,7 @@ function InputWidget({dispatch, route}) {
         setStopLog(e.target.value);
         break;
       default:
-        // code block
+        break;
     }
     
   }
