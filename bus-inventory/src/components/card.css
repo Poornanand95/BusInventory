@@ -4,7 +4,8 @@
     border: 1px solid #efefef;
     box-shadow: 0 2px 30px 0 rgb(0 0 0 / 6%);
     border-radius: 8px;
-    margin: 20px 0px;
+    max-width: 360px;
+    margin: 20px auto;
 }
 .fixed-height-img {
     border-radius: 8px 8px 0px 0px;
